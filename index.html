@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Amiqa Cell &amp; Service Elektronik Kayong Utara</title>
+<meta name="description" content="Amiqa Cell & Jasa Service Elektronik Maulana. Melayani tarik tunai, top up, tagihan, dan service elektronik panggilan di Sukadana, Kayong Utara, Benawai Agung. Bergaransi dan dikerjakan oleh ahli.">
+<meta name="keywords"    content="service elektronik kayong utara, service sukadana, tukang service ac sukadana, service kulkas sukadana, service tv kayong utara, tarik tunai benawai agung, konter amiqa cell, service elektronik panggilan">
+<meta name="author"      content="Amiqa Cell & Maulana">
+
+<meta property="og:title"       content="Amiqa Cell & Service Elektronik Maulana">
+<meta property="og:description" content="Solusi digital dan service elektronik panggilan terpercaya di Kayong Utara. Mudah, Aman, Cepat.">
+<meta property="og:image"       content="https://amiqacell.icila.my.id/img/thumbnail-wa.jpg">
+<meta property="og:url"         content="https://amiqacell.icila.my.id">
+<meta property="og:type"        content="website">
+
+<!-- Icons & Fonts -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- Main stylesheet -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     INTRO LOADER
+════════════════════════════════════════════ -->
+<div id="ldr">
+  <div class="ldr-ring">
+    <svg viewBox="0 0 88 88">
+      <circle cx="44" cy="44" r="38" class="tr"/>
+      <circle cx="44" cy="44" r="38" class="pr"/>
+    </svg>
+    <i class="fa-solid fa-bolt ldr-icon"></i>
+  </div>
+  <div class="ldr-t">AMIQA CELL<br><em>&amp; SERVICE ELEKTRONIK</em></div>
+  <div class="ldr-s">MUDAH · AMAN · CEPAT</div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     THEME TOGGLE
+════════════════════════════════════════════ -->
+<button id="tbtn" title="Ganti Tema" aria-label="Toggle tema gelap / terang">
+  <i class="fa-solid fa-sun"></i>
+</button>
+
+<!-- ══════════════════════════════════════════
+     CANVAS PARTICLE BACKGROUND
+════════════════════════════════════════════ -->
+<canvas id="cvs" aria-hidden="true"></canvas>
+
+<!-- ══════════════════════════════════════════
+     3-D DECO CUBES (fixed, background)
+════════════════════════════════════════════ -->
+<div class="dcube a" aria-hidden="true">
+  <div class="c3d">
+    <div class="cf fr"><i class="fa-solid fa-bolt"></i></div>
+    <div class="cf bk"><i class="fa-solid fa-microchip"></i></div>
+    <div class="cf lf"><i class="fa-solid fa-wifi"></i></div>
+    <div class="cf rt"><i class="fa-solid fa-plug"></i></div>
+    <div class="cf tp"><i class="fa-solid fa-tv"></i></div>
+    <div class="cf bt"><i class="fa-solid fa-mobile-screen-button"></i></div>
+  </div>
+</div>
+
+<div class="dcube b" aria-hidden="true">
+  <div class="c3d">
+    <div class="cf fr"><i class="fa-solid fa-snowflake"></i></div>
+    <div class="cf bk"><i class="fa-solid fa-icicles"></i></div>
+    <div class="cf lf"><i class="fa-solid fa-fan"></i></div>
+    <div class="cf rt"><i class="fa-solid fa-laptop"></i></div>
+    <div class="cf tp"><i class="fa-solid fa-blender"></i></div>
+    <div class="cf bt"><i class="fa-solid fa-volume-high"></i></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     HERO
+════════════════════════════════════════════ -->
+<header class="hero">
+
+  <!-- Floating circuit chip SVGs -->
+  <div class="cscene" aria-hidden="true">
+    <!-- Chip 1: IC package -->
+    <div class="chip">
+      <svg width="58" height="58" viewBox="0 0 64 64" fill="none">
+        <rect x="16" y="16" width="32" height="32" rx="3" stroke="rgba(0,200,255,.65)" stroke-width="1.5" fill="rgba(0,200,255,.04)"/>
+        <rect x="22" y="22" width="20" height="20" rx="2" stroke="rgba(0,200,255,.35)" stroke-width="1"   fill="rgba(0,200,255,.06)"/>
+        <line x1="8"  y1="24" x2="16" y2="24" stroke="rgba(0,200,255,.55)" stroke-width="1.5"/>
+        <line x1="8"  y1="32" x2="16" y2="32" stroke="rgba(0,200,255,.55)" stroke-width="1.5"/>
+        <line x1="8"  y1="40" x2="16" y2="40" stroke="rgba(0,200,255,.55)" stroke-width="1.5"/>
+        <line x1="48" y1="24" x2="56" y2="24" stroke="rgba(0,200,255,.55)" stroke-width="1.5"/>
+        <line x1="48" y1="32" x2="56" y2="32" stroke="rgba(0,200,255,.55)" stroke-width="1.5"/>
+        <line x1="48" y1="40" x2="56" y2="40" stroke="rgba(0,200,255,.55)" stroke-width="1.5"/>
+        <line x1="24" y1="8"  x2="24" y2="16" stroke="rgba(0,200,255,.55)" stroke-width="1.5"/>
+        <line x1="32" y1="8"  x2="32" y2="16" stroke="rgba(0,200,255,.55)" stroke-width="1.5"/>
+        <line x1="40" y1="8"  x2="40" y2="16" stroke="rgba(0,200,255,.55)" stroke-width="1.5"/>
+        <line x1="24" y1="48" x2="24" y2="56" stroke="rgba(0,200,255,.55)" stroke-width="1.5"/>
+        <line x1="32" y1="48" x2="32" y2="56" stroke="rgba(0,200,255,.55)" stroke-width="1.5"/>
+        <line x1="40" y1="48" x2="40" y2="56" stroke="rgba(0,200,255,.55)" stroke-width="1.5"/>
+        <circle cx="32" cy="32" r="4" fill="rgba(0,200,255,.5)"/>
+      </svg>
+    </div>
+    <!-- Chip 2: Hexagon -->
+    <div class="chip">
+      <svg width="46" height="46" viewBox="0 0 64 64" fill="none">
+        <polygon points="32,4 60,20 60,44 32,60 4,44 4,20" stroke="rgba(0,200,255,.45)" stroke-width="1.5" fill="rgba(0,200,255,.03)"/>
+        <polygon points="32,14 50,24 50,40 32,50 14,40 14,24" stroke="rgba(0,200,255,.28)" stroke-width="1"   fill="rgba(0,200,255,.05)"/>
+        <circle cx="32" cy="32" r="5" fill="rgba(0,200,255,.45)"/>
+        <circle cx="32" cy="32" r="2" fill="rgba(0,200,255,.9)"/>
+      </svg>
+    </div>
+    <!-- Chip 3: Crosshair ring -->
+    <div class="chip">
+      <svg width="40" height="40" viewBox="0 0 64 64" fill="none">
+        <circle cx="32" cy="32" r="26" stroke="rgba(0,200,255,.32)" stroke-width="1.5" fill="none"/>
+        <circle cx="32" cy="32" r="16" stroke="rgba(0,200,255,.2)"  stroke-width="1"   fill="none"/>
+        <circle cx="32" cy="32" r="5"  fill="rgba(0,200,255,.45)"/>
+        <line x1="5"  y1="32" x2="14" y2="32" stroke="rgba(0,200,255,.45)" stroke-width="1.5"/>
+        <line x1="50" y1="32" x2="59" y2="32" stroke="rgba(0,200,255,.45)" stroke-width="1.5"/>
+        <line x1="32" y1="5"  x2="32" y2="14" stroke="rgba(0,200,255,.45)" stroke-width="1.5"/>
+        <line x1="32" y1="50" x2="32" y2="59" stroke="rgba(0,200,255,.45)" stroke-width="1.5"/>
+      </svg>
+    </div>
+    <!-- Chip 4: PCB grid -->
+    <div class="chip">
+      <svg width="36" height="36" viewBox="0 0 64 64" fill="none">
+        <rect x="8" y="8" width="48" height="48" rx="6" stroke="rgba(0,200,255,.35)" stroke-width="1.5" fill="rgba(0,200,255,.03)"/>
+        <line x1="8" y1="24" x2="56" y2="24" stroke="rgba(0,200,255,.14)" stroke-width="1"/>
+        <line x1="8" y1="40" x2="56" y2="40" stroke="rgba(0,200,255,.14)" stroke-width="1"/>
+        <line x1="24" y1="8" x2="24" y2="56" stroke="rgba(0,200,255,.14)" stroke-width="1"/>
+        <line x1="40" y1="8" x2="40" y2="56" stroke="rgba(0,200,255,.14)" stroke-width="1"/>
+        <circle cx="24" cy="24" r="3" fill="rgba(0,200,255,.55)"/>
+        <circle cx="40" cy="24" r="3" fill="rgba(0,200,255,.55)"/>
+        <circle cx="24" cy="40" r="3" fill="rgba(0,200,255,.55)"/>
+        <circle cx="40" cy="40" r="3" fill="rgba(0,200,255,.55)"/>
+      </svg>
+    </div>
+  </div><!-- /cscene -->
+
+  <div class="hero-g">
+    <!-- LEFT: copy -->
+    <div class="hero-left">
+      <div class="badge">
+        <span class="bdot"></span>
+        Solusi Digital &amp; Service Elektronik
+      </div>
+
+      <h1 class="h1">
+        AMIQA CELL
+        <span class="amp">&amp;</span>
+        <span class="glow">SERVICE<br></span>
+      </h1>
+
+      <div class="tgrow">
+        <span class="tp">MUDAH</span><span class="tps">—</span>
+        <span class="tp">AMAN</span><span class="tps">—</span>
+        <span class="tp">CEPAT</span>
+      </div>
+
+      <div class="hmeta">
+        <div class="mrow">
+          <i class="fa-regular fa-clock"></i>
+          <span>Buka Setiap Hari <strong>07.00 – 23.00 WIB</strong></span>
+        </div>
+        <div class="mrow">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Jl. Famili, Desa Benawai Agung</span>
+        </div>
+      </div>
+
+      <div class="ctar">
+        <a href="https://maps.google.com/?q=-1.193367,109.994691" target="_blank" rel="noopener" class="btn-m">
+          <i class="fa-solid fa-map-pin"></i> Google Maps
+        </a>
+        <a href="#services" class="btn-a">
+          Lihat Layanan <i class="fa-solid fa-arrow-down"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- RIGHT: visual cards + electron orbits -->
+    <div class="hvis">
+      <!-- Electron orbit system -->
+      <div class="orw" aria-hidden="true">
+        <div class="or o1"><div class="el"></div></div>
+        <div class="or o2"><div class="el"></div></div>
+        <div class="or o3"><div class="el"></div></div>
+      </div>
+
+      <div class="vc v1">
+        <img src="https://cdn-icons-png.flaticon.com/512/622/622204.png" alt="Tarik Tunai" loading="lazy">
+        <span>Tarik Tunai</span>
+      </div>
+      <div class="vc v2">
+        <img src="https://cdn-icons-png.flaticon.com/512/3437/3437367.png" alt="Top Up" loading="lazy">
+        <span>Top Up</span>
+      </div>
+      <div class="vc v3">
+        <img src="https://cdn-icons-png.flaticon.com/512/3203/3203071.png" alt="Service" loading="lazy">
+        <span>Service</span>
+      </div>
+      <div class="vc v4">
+        <img src="https://cdn-icons-png.flaticon.com/512/2769/2769339.png" alt="Panggilan" loading="lazy">
+        <span>Panggilan</span>
+      </div>
+    </div>
+  </div><!-- /hero-g -->
+
+  <div class="shint" aria-hidden="true">
+    <span>SCROLL</span>
+    <div class="sline"></div>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════
+     STATS STRIP
+════════════════════════════════════════════ -->
+<div class="stats-w" aria-label="Statistik">
+  <div class="stats-i">
+    <div class="sb rv">
+      <span class="sn" data-n="500">0+</span>
+      <span class="sl2">Pelanggan Puas</span>
+    </div>
+    <div class="sb rv">
+      <span class="sn" data-n="8">0+</span>
+      <span class="sl2">Tahun Pengalaman</span>
+    </div>
+    <div class="sb rv">
+      <span class="sn" data-n="16">0+</span>
+      <span class="sl2">Layanan Tersedia</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SERVICES — Layanan Pembelian & Transaksi
+════════════════════════════════════════════ -->
+<section id="services" class="svc-s">
+  <div class="wrap">
+
+    <div class="shdr rv">
+      <p class="slbl">— Amiqa Cell —</p>
+      <h2 class="stit">Layanan Pembelian &amp; <span class="ac">Transaksi</span></h2>
+    </div>
+
+    <div class="sdesc rv">
+      <p><strong>Amiqa Cell</strong> adalah solusi penyedia layanan transaksi digital dan pembayaran terlengkap di Kabupaten Kayong Utara. Kami hadir untuk mempermudah segala kebutuhan transaksi harian Anda dengan jaminan proses yang cepat, aman, dan terpercaya.</p>
+      <p>Kami sudah dipercaya oleh masyarakat sekitar untuk melayani tarik tunai, transfer ke semua bank, top up e-wallet, hingga pembayaran tagihan bulanan tanpa perlu antre jauh ke bank atau ATM. Kami senantiasa memberikan pelayanan terbaik untuk kemudahan Anda.</p>
+    </div>
+
+    <div class="gal2 rv">
+      <img src="img/transaksi1.jpg" alt="Layanan Transaksi" loading="lazy">
+      <img src="img/transaksi2.jpg" alt="Tarik Tunai"       loading="lazy">
+    </div>
+
+    <div class="svc-g">
+      <div class="si rv"><div class="sii"><i class="fa-solid fa-money-bill-transfer"></i></div><span>Tarik Tunai Bank/Dana</span><div class="sar"><i class="fa-solid fa-arrow-right"></i></div></div>
+      <div class="si rv"><div class="sii"><i class="fa-solid fa-building-columns"></i></div><span>Transfer Semua Bank</span><div class="sar"><i class="fa-solid fa-arrow-right"></i></div></div>
+      <div class="si rv"><div class="sii"><i class="fa-solid fa-wallet"></i></div><span>TopUp E-wallet</span><div class="sar"><i class="fa-solid fa-arrow-right"></i></div></div>
+      <div class="si rv"><div class="sii"><i class="fa-solid fa-bolt"></i></div><span>Voucher Listrik</span><div class="sar"><i class="fa-solid fa-arrow-right"></i></div></div>
+      <div class="si rv"><div class="sii"><i class="fa-solid fa-signal"></i></div><span>Pulsa Operator</span><div class="sar"><i class="fa-solid fa-arrow-right"></i></div></div>
+      <div class="si rv"><div class="sii"><i class="fa-solid fa-wifi"></i></div><span>Paket Data</span><div class="sar"><i class="fa-solid fa-arrow-right"></i></div></div>
+      <div class="si rv"><div class="sii"><i class="fa-solid fa-droplet"></i></div><span>Tagihan Air</span><div class="sar"><i class="fa-solid fa-arrow-right"></i></div></div>
+      <div class="si rv"><div class="sii"><i class="fa-solid fa-plug"></i></div><span>Tagihan Listrik</span><div class="sar"><i class="fa-solid fa-arrow-right"></i></div></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     PARTNERS — Logo Marquee
+════════════════════════════════════════════ -->
+<section class="par-s">
+  <div class="wrap">
+    <div class="shdr c rv">
+      <p class="slbl">— Support Berbagai —</p>
+      <h2 class="stit">Jenis <span class="ac">Transaksi</span></h2>
+    </div>
+  </div>
+
+  <div class="mwrap" aria-label="Logo partner">
+    <div class="min">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Logo_dana_blue.svg"          alt="DANA"       class="plogo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Logo_PLN.svg"                alt="PLN"        class="plogo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Shopee.svg"                  alt="Shopee"     class="plogo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Gopay_logo.svg"              alt="Gopay"      class="plogo">
+      <img src="img/ovo.png"        alt="OVO"        class="plogo">
+      <img src="img/seabank.png"    alt="SeaBank"    class="plogo">
+      <img src="img/xl.png"         alt="XL Axiata"  class="plogo">
+      <img src="img/indosat.png"    alt="Indosat"    class="plogo">
+      <img src="img/axis.png"       alt="AXIS"       class="plogo">
+      <img src="img/telkomsel.png"  alt="Telkomsel"  class="plogo">
+      <img src="img/tri.png"        alt="3 (Tri)"    class="plogo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Logo_BRI.png"                alt="BRI"        class="plogo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Bank_Mandiri_logo_2016.svg"  alt="Mandiri"    class="plogo">
+      <img src="img/bni.png"        alt="BNI"        class="plogo">
+      <img src="img/bank_kalbar.png"alt="Bank Kalbar" class="plogo">
+      <img src="img/bca.png"        alt="BCA"        class="plogo">
+      <!-- Duplicate set for seamless infinite loop -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Logo_dana_blue.svg"          alt="DANA"       class="plogo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Logo_PLN.svg"                alt="PLN"        class="plogo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Shopee.svg"                  alt="Shopee"     class="plogo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Gopay_logo.svg"              alt="Gopay"      class="plogo">
+      <img src="img/ovo.png"        alt="OVO"        class="plogo">
+      <img src="img/seabank.png"    alt="SeaBank"    class="plogo">
+      <img src="img/xl.png"         alt="XL Axiata"  class="plogo">
+      <img src="img/indosat.png"    alt="Indosat"    class="plogo">
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     REPAIR — Jasa Service Elektronik Maulana
+════════════════════════════════════════════ -->
+<section id="repair" class="rep-s">
+  <div class="wrap">
+
+    <div class="shdr c rv">
+      <p class="slbl">— Bang Maulana —</p>
+      <h2 class="stit">Jasa Service <span class="ac">Elektronik Maulana</span></h2>
+    </div>
+
+    <div class="sdesc rv">
+      <p><strong>Jasa Service Elektronik Maulana</strong> adalah penyedia layanan service elektronik panggilan terbaik dan terpercaya di Kabupaten Kayong Utara. Kami memiliki tenaga teknisi ahli dan profesional dengan pengalaman bertahun-tahun yang siap memastikan hasil kerja yang rapi, tepat waktu, dan bergaransi.</p>
+      <p>Kami telah dipercaya oleh masyarakat luas, mulai dari warga <strong>Desa Benawai Agung, Desa Sedahan Jaya, hingga berbagai desa lainnya di sekitarnya</strong> untuk memperbaiki Kulkas, TV, AC, Mesin Cuci, Alat Dapur, Handphone, hingga Laptop. Apapun kendala elektronik Anda, teknisi kami siap datang ke rumah untuk menanganinya hingga kembali normal seperti sedia kala.</p>
+    </div>
+
+    <!-- Guarantee strip -->
+    <div class="guar rv">
+      <div class="gi"><i class="fa-solid fa-shield-halved"></i> Bergaransi</div>
+      <div class="gd"></div>
+      <div class="gi"><i class="fa-solid fa-user-gear"></i> Dikerjakan Ahli</div>
+      <div class="gd"></div>
+      <div class="gi"><i class="fa-solid fa-thumbs-up"></i> Pekerjaan Rapi</div>
+    </div>
+
+    <div class="gal2 rv">
+      <img src="img/service1.jpg" alt="Service Mesin"     loading="lazy">
+      <img src="img/service2.jpg" alt="Teknisi Bekerja"   loading="lazy">
+    </div>
+
+    <!-- Repair cards -->
+    <div class="rg">
+      <div class="rc rv"><i class="fa-solid fa-icicles ri"></i><p class="rl2">Kulkas</p></div>
+      <div class="rc rv"><i class="fa-solid fa-snowflake ri"></i><p class="rl2">AC (Air Conditioner)</p></div>
+      <div class="rc rv"><i class="fa-solid fa-tv ri"></i><p class="rl2">Televisi (TV)</p></div>
+      <div class="rc rv"><i class="fa-solid fa-fan ri"></i><p class="rl2">Kipas Angin</p></div>
+      <div class="rc rv"><i class="fa-solid fa-volume-high ri"></i><p class="rl2">Sound System</p></div>
+      <div class="rc rv"><i class="fa-solid fa-blender ri"></i><p class="rl2">Alat Dapur Elektronik</p></div>
+      <div class="rc rv"><i class="fa-solid fa-mobile-screen-button ri"></i><p class="rl2">Handphone</p></div>
+      <div class="rc rv"><i class="fa-solid fa-laptop ri"></i><p class="rl2">Laptop / Komputer</p></div>
+    </div>
+
+    <!-- On-call banner -->
+    <div class="oc rv">
+      <i class="fa-solid fa-house-chimney-crack oci"></i>
+      <div class="ocb">
+        <h3>Service Panggilan Rumah</h3>
+        <p>siap datang langsung ke rumah Anda untuk memperbaiki perangkat elektronik kesayangan Anda dengan cepat dan aman.</p>
+      </div>
+      <a href="https://wa.me/62895326060991?text=Halo%20Bang%20Maulana,%20saya%20mau%20pesan%20service%20panggilan." target="_blank" rel="noopener" class="btn-wa">
+        <i class="fa-brands fa-whatsapp"></i> Pesan Sekarang
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     TESTIMONIALS
+════════════════════════════════════════════ -->
+<section class="tes-s">
+  <div class="wrap">
+
+    <div class="shdr c rv">
+      <p class="slbl">— Ulasan Pelanggan —</p>
+      <h2 class="stit">Apa Kata <span class="ac">Mereka?</span></h2>
+    </div>
+
+    <div class="tes-w rv">
+      <div class="tes-t">
+
+        <div class="tc on">
+          <div class="tcq"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="tct">"Saya sempat bingung mencari layanan service TV karena tiba-tiba TV mati total. Untungnya ketemu Jasa Service Bang Maulana, responnya cepat. Teknisi langsung datang ke rumah di Benawai Agung, dan TV saya normal kembali. Mantap! 👍👍"</p>
+          <div class="tcf">
+            <div class="tca"><i class="fa-solid fa-user"></i></div>
+            <div>
+              <div class="tcn">Bapak Supriadi</div>
+              <div class="tcst">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tc">
+          <div class="tcq"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="tct">"Sangat terbantu dengan adanya Amiqa Cell. Mau tarik tunai atau top up e-wallet jadi gampang banget tanpa harus jauh-jauh cari ATM ke luar desa. Pelayanannya ramah, prosesnya cepat dan aman banget. Sukses terus!"</p>
+          <div class="tcf">
+            <div class="tca"><i class="fa-solid fa-user"></i></div>
+            <div>
+              <div class="tcn">Ibu Ratnasari</div>
+              <div class="tcst">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tc">
+          <div class="tcq"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="tct">"Kulkas di rumah tiba-tiba tidak dingin, langsung telpon Bang Maulana. Pengerjaannya sangat profesional dan rapi, teknisinya bener-bener ahli. Harganya juga bersahabat. Recommended banget buat warga Sedahan Jaya dan sekitarnya!"</p>
+          <div class="tcf">
+            <div class="tca"><i class="fa-solid fa-user"></i></div>
+            <div>
+              <div class="tcn">Agus Pratama</div>
+              <div class="tcst">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /tes-t -->
+
+      <div class="slctl">
+        <button class="slb" id="prev" aria-label="Testimonial sebelumnya">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div class="dts" role="tablist" aria-label="Pilih testimoni">
+          <span class="dt on" onclick="goSlide(0)" role="tab" aria-label="Testimoni 1"></span>
+          <span class="dt"    onclick="goSlide(1)" role="tab" aria-label="Testimoni 2"></span>
+          <span class="dt"    onclick="goSlide(2)" role="tab" aria-label="Testimoni 3"></span>
+        </div>
+        <button class="slb" id="next" aria-label="Testimonial berikutnya">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </div><!-- /tes-w -->
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FAQ
+════════════════════════════════════════════ -->
+<section class="faq-s">
+  <div class="wrap">
+
+    <div class="shdr c rv">
+      <p class="slbl">— Informasi —</p>
+      <h2 class="stit">Pertanyaan yang Sering <span class="ac">Diajukan</span></h2>
+    </div>
+
+    <div class="faq-l">
+
+      <div class="fi rv">
+        <div class="fq">
+          <span>Apakah melayani service panggilan ke seluruh Kayong Utara?</span>
+          <div class="fic"><i class="fa-solid fa-plus"></i></div>
+        </div>
+        <div class="fa2">
+          <p>Ya, melayani jasa service elektronik panggilan langsung ke rumah Anda, khususnya untuk area Sukadana, Desa Benawai Agung, Sedahan Jaya, dan desa-desa sekitarnya.</p>
+        </div>
+      </div>
+
+      <div class="fi rv">
+        <div class="fq">
+          <span>Berapa lama garansi service yang diberikan?</span>
+          <div class="fic"><i class="fa-solid fa-plus"></i></div>
+        </div>
+        <div class="fa2">
+          <p>Kami memberikan garansi service dengan durasi yang bervariasi tergantung dari jenis kerusakan dan sparepart yang diganti. Silakan tanyakan langsung ke teknisi kami setelah pengecekan.</p>
+        </div>
+      </div>
+
+      <div class="fi rv">
+        <div class="fq">
+          <span>Apakah Amiqa Cell melayani tarik tunai di luar jam operasional?</span>
+          <div class="fic"><i class="fa-solid fa-plus"></i></div>
+        </div>
+        <div class="fa2">
+          <p>Jam operasional normal kami adalah pukul 07.00 – 23.00 WIB. Namun untuk keadaan mendesak, Anda bisa menghubungi nomor WhatsApp kami terlebih dahulu untuk konfirmasi ketersediaan layanan.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════ -->
+<footer>
+  <div class="fg">
+    <div class="fbr">
+      <h3>AMIQA CELL</h3>
+      <p>&amp; Service Maulana</p>
+    </div>
+    <div class="fin">
+      <div class="fir"><i class="fa-solid fa-globe"></i><span>amiqacell.my.id</span></div>
+      <div class="fir"><i class="fa-solid fa-location-dot"></i><span>Jl. Famili, Desa Benawai Agung, Kayong Utara</span></div>
+      <div class="fir"><i class="fa-regular fa-clock"></i><span>Setiap Hari 07.00 – 23.00 WIB</span></div>
+    </div>
+  </div>
+  <div class="fbt">*Syarat dan ketentuan garansi berlaku.</div>
+</footer>
+
+<!-- ══════════════════════════════════════════
+     FLOATING WHATSAPP
+════════════════════════════════════════════ -->
+<a href="https://wa.me/62895326060991?text=Halo%20Amiqa%20Cell%20%26%20Bang%20Maulana,%20saya%20ingin%20menggunakan%20layanan%20Anda."
+   class="waf" target="_blank" rel="noopener noreferrer" aria-label="Hubungi via WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+  <span>Hubungi Kami</span>
+</a>
+
+<!-- Main script — loaded last for performance -->
+<script src="script.js"></script>
+</body>
+</html>
